@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BinaryHexConverter.Helper;
+using System;
 
 namespace BinaryHexConverter.Processor
 {
@@ -14,12 +11,11 @@ namespace BinaryHexConverter.Processor
 
             try
             {
-                result = Convert.ToString(Convert.ToInt32(input, 16), 2);
-
+                result = Convert.ToInt32(input, 16).ToBinaryString();
             }
             catch(Exception ex)
             {
-
+                Console.WriteLine("Exception message: {0}", ex.Message);
             }
 
             return result;
@@ -36,7 +32,7 @@ namespace BinaryHexConverter.Processor
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine("Exception message: {0}", ex.Message);
             }
 
             return result;

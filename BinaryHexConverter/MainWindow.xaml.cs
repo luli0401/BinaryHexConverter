@@ -1,18 +1,5 @@
 ﻿using BinaryHexConverter.Processor;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BinaryHexConverter
 {
@@ -42,15 +29,19 @@ namespace BinaryHexConverter
             {
                 BinaryTextBox.Text = HexProcessor.ConvertToBinary(input);
                 IntegerTextBox.Text = HexProcessor.ConvertToInteger(input);
+                HexTextBox.Text = input;
             }
             else if (IsBinary.IsChecked == true)
             {
-                IntegerTextBox.Text = string.Empty;
-                HexTextBox.Text = string.Empty;
+                IntegerTextBox.Text = BinaryProcessor.ConvertToInteger(input);
+                HexTextBox.Text = BinaryProcessor.ConvertToHex(input);
+                BinaryTextBox.Text = input;
             }
             else if (IsInteger.IsChecked == true)
             {
-
+                HexTextBox.Text = IntegerProcessor.ConvertToHex(input);
+                BinaryTextBox.Text = IntegerProcessor.ConvertToBinary(input);
+                IntegerTextBox.Text = input;
             }
         }
 
