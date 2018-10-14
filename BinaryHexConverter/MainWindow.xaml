@@ -14,79 +14,56 @@
     <Grid  >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
-        <StackPanel Grid.Row="0"
-                    Grid.Column="1"
-                    VerticalAlignment="Center">
-            <RadioButton GroupName="Converter" Name="IsInteger" Content="Integer Number" IsChecked="True"/>
-            <RadioButton GroupName="Converter" Name="IsHex" Content="Hex Number" />
-            <RadioButton GroupName="Converter" Name="IsBinary" Content="Binary Number" />
-        </StackPanel>
 
 
         <TextBlock Grid.Row="0"
-                   Grid.Column="2" 
-                   Style="{StaticResource TextBlockStyle}">
-            Input:
-        </TextBlock>
-        <TextBox Grid.Row="0"
-                 Grid.Column="3"
-                 Name="InputTextBox"
-                 Style="{StaticResource TextBoxStyle}"
-                 Text="{Binding Path=InputText}"/>
-
-        <TextBlock Grid.Row="1"
                    Grid.Column="0" 
                    Style="{StaticResource TextBlockStyle}">
             Integer:
         </TextBlock>
-        <TextBox Grid.Row="1"
+        <TextBox Grid.Row="0"
                  Grid.Column="1"
                  Name="IntegerTextBox"
+                 TextChanged="IntegerTextBox_TextChanged"
                  Style="{StaticResource TextBoxStyle}"/>
 
         <TextBlock Grid.Row="1"
-                   Grid.Column="2" 
+                   Grid.Column="0" 
                    Style="{StaticResource TextBlockStyle}">
             Hex:
         </TextBlock>
         <TextBox Grid.Row="1"
-                 Grid.Column="3"
+                 Grid.Column="1"
                  Name="HexTextBox"
+                 TextChanged="HexTextBox_TextChanged"
                  Style="{StaticResource TextBoxStyle}"/>
 
-        <TextBlock Grid.Row="1"
-                   Grid.Column="4" 
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0" 
                    Style="{StaticResource TextBlockStyle}">
             Binary:
         </TextBlock>
-        <TextBox Grid.Row="1"
-                 Grid.Column="5"
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
                  Name="BinaryTextBox"
+                 TextChanged="BinaryTextBox_TextChanged"
                  Style="{StaticResource TextBoxStyle}"/>
-        
-        <Button Click="ConvertExecute"
-                Grid.Row="2"
-                Grid.Column="3"
-                Width="100" 
-                Height="50" 
-                Content="Convert"/>
 
         <Button Click="RefreshExecute"
-                Grid.Row="2"
-                Grid.Column="4"
+                Grid.Row="4"
+                Grid.Column="1"
                 Width="100" 
                 Height="50" 
                 Content="Refresh"/>

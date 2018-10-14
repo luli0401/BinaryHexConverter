@@ -5,16 +5,18 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="TextBox" x:Key="TextBoxStyle" >
-            <Setter Property="Height"              Value="25"/>
-            <Setter Property="Width"               Value="125"/>
+            <Setter Property="Height"              Value="50"/>
+            <Setter Property="Width"               Value="300"/>
+            <Setter Property="FontSize"            Value="30"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment"   Value="Center"/>
         </Style>
         
         <Style TargetType="TextBlock" x:Key="TextBlockStyle" >
-            <Setter Property="Height"              Value="25"/>
+            <Setter Property="Height"              Value="40"/>
             <Setter Property="Width"               Value="Auto"/>
             <Setter Property="Margin"              Value="1,2,5,2"/>
+            <Setter Property="FontSize"            Value="25"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment"   Value="Center"/>
         </Style>

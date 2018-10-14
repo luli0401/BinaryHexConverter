@@ -1,41 +1,30 @@
 ﻿using BinaryHexConverter.Helper;
 using System;
+using System.Text.RegularExpressions;
 
 namespace BinaryHexConverter.Processor
 {
     public class HexProcessor
     {
-        internal string ConvertToBinary(string input)
+        internal int ConvertToHex(string input)
         {
-            string result = string.Empty;
+            int hexValue = 2;
 
             try
             {
-                result = Convert.ToInt32(input, 16).ToBinaryString();
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Exception message: {0}", ex.Message);
-            }
-
-            return result;
-        }
-
-        internal string ConvertToInteger(string input)
-        {
-            string result = string.Empty;
-
-            try
-            {
-                result = Convert.ToInt32(input, 16).ToString();
-
+                hexValue = Convert.ToInt32(input, 16);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Exception message: {0}", ex.Message);
             }
 
-            return result;
+            return hexValue;
+        }
+
+        internal bool IsHexNumber(string input)
+        {
+            return Regex.IsMatch(input, "[0-9A-Fa-f]+");
         }
     }
 }
