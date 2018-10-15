@@ -1,5 +1,4 @@
-﻿using BinaryHexConverter.Helper;
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 
 namespace BinaryHexConverter.Processor
@@ -24,7 +23,7 @@ namespace BinaryHexConverter.Processor
 
         internal bool IsHexNumber(string input)
         {
-            return Regex.IsMatch(input, "[0-9A-Fa-f]+");
+            return Regex.IsMatch(input, @"\A\b[0-9a-fA-F]+\b\Z");
         }
     }
 }

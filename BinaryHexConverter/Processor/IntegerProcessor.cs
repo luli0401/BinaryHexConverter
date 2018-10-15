@@ -1,7 +1,4 @@
-﻿using BinaryHexConverter.Helper;
-using System;
-
-namespace BinaryHexConverter.Processor
+﻿namespace BinaryHexConverter.Processor
 {
     public class IntegerProcessor
     {

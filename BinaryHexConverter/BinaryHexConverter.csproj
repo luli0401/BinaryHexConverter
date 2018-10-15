@@ -58,8 +58,8 @@
     <Compile Include="Helper\Extension.cs" />
     <Compile Include="Processor\BinaryProcessor.cs" />
     <Compile Include="Processor\HexProcessor.cs" />
+    <Compile Include="Processor\HistoryProcessor.cs" />
     <Compile Include="Processor\IntegerProcessor.cs" />
-    <Compile Include="ViewModel\MainWindowVM.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
